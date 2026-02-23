@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        } body{
+            display: flex;
+            flex-direction: column;
+            padding-block:20px;
+            align-items: center;
+            gap: 30px;
+        }
+        box1{
+         height: 300px;
+         width: 300px;
+         background-color: red;
+        }
+    </style>
+</head>
+<body>
+     <h1>Neda Tavakoli</h1>
+     <h2>Web Developer</h2>
+     <div class="box1" style="width: 300px;height: 300px; background-color: red;"></div>
+     <div class="box2" style="width: 300px; height: 300px;background-color: blue;"></div>
+     <div class="box3" style="width: 300px; height: 300px;background-color: forestgreen;"></div>
+     <div class="box4" style="width: 300px; height: 300px;background-color: salmon;"></div>
+     <div class="box5" style="width: 300px; height: 300px;background-color: aqua;"></div>
+     <div class="box6" style="width: 300px; height: 300px;background-color: cadetblue;"></div>
+     <script src="https://unpkg.com/scrollreveal"></script>
+     <script>
+        ScrollReveal().reveal('h1',{
+            delay:500,
+            reset:true,
+            origin:'left'
+        });
+          ScrollReveal().reveal('h2',{
+            delay:700,
+            reset:true
+        });
+          ScrollReveal().reveal('.box1',{
+            delay:900,
+            reset:true,
+            origin:'right',
+            distance:'250px',
+        });
+          ScrollReveal().reveal('.box2',{
+            delay:1000,
+            reset:true,
+            origin:'left',
+            distance:'250px',
+        });
+          ScrollReveal().reveal('.box3',{
+            delay:1200,
+            reset:true,
+            origin:'bottom',
+            distance:'250px',
+        });
+          ScrollReveal().reveal('.box4',{
+            delay:1300,
+            reset:true,
+            origin:'right',
+            distance:'250px',
+        });
+          ScrollReveal().reveal('.box5',{
+            delay:1400,
+            reset:true,
+            origin:'left',
+            distance:'250px',
+        });
+          ScrollReveal().reveal('.box6',{
+            delay:900,
+            reset:true,
+            origin:'right',
+            distance:'250px',
+        });
+     </script>
+</body>
+</html>
