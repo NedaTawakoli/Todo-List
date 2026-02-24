@@ -4,10 +4,10 @@ const addBtn = document.getElementById("addBtn");
 const todoList=[];
 addBtn.addEventListener("click",()=>{
     if(!continerModal.classList.contains("toggleForm")){
-     continerModal.classList.add("toggleForm")
-     addBtn.textContent = "Hide Form"
+     continerModal.classList.add("toggleForm");
+     addBtn.textContent = "Hide Form";
     }else{
         continerModal.classList.remove("toggleForm");
-        addBtn.textContent = "Todo App"
+        addBtn.textContent = "Add Todo";
     }
-})
+});
