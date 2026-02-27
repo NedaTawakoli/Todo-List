@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        body{
+            
+            font-size: 20px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+        button{
+            padding: 15px 25px;
+            border: none;
+           color: white;
+           border-radius: 5px;
+            font-size: 25px;
+            margin-top: 15pc;
+           gap: 10px;
+           margin: 15pc 10px;
+            background-image: linear-gradient(60deg,purple,pink,orange,red);
+        }
+    </style>
+</head>
+<body>
+    <button onclick="handleAlert()">کلیک کنید</button>
+    <button onclick="handle1Alert()">کلیک کنید</button>
+    <div style=" width: 50%; display: flex;" id="continer"></div>
+    <script>
+       let parent = document.getElementById('continer');
+        function handle1Alert(){
+           let text = document.createElement("h1");
+           text.textContent = "Hello, Welcome to the class";
+           parent.append(text);
+        }
+        const handleAlert=()=>{
+          Swal.fire({
+  title: "Good job!",
+  text: "You clicked the button!",
+  icon: "success"
+});
+        }
+        
+
+    </script>
+</body>
+</html>
