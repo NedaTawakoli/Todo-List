@@ -14,14 +14,17 @@ addBtn.addEventListener("click",()=>{
 });
 saveBtn.addEventListener("click",(event)=>{
     event.preventDefault();
+    parent.innerHTML = "";
     storeTodo();
+      showTodo();
 });
 function storeTodo(){
    const todo = document.getElementById("todo").value;
    const importence = document.getElementById("importance").value;
    todoList.push({
     todo,
-    importence
+    importence,
+    compaleted:false,
    });
  document.getElementById("todo").value = "";
  document.getElementById("importance").value = "";
@@ -29,16 +32,36 @@ function storeTodo(){
     continerModal.classList.remove("toggleForm");
     addBtn.textContent="Add Todo";
    }
-   showTodo();
+ 
 }
 function showTodo(){
-for(let todo of todoList){
-    parent.innerHTML = "";
+   const sortedList = todoList.sort((a,b)=>a.compaleted-b.compaleted);
+for(let todo of sortedList){
    const div = document.createElement("div");
+   div.addEventListener("click",()=>{
+   todo.compaleted = !todo.compaleted;
+   parent.innerHTML = "";
+   showTodo();
+   });
+   div.classList.add('box');
   const h1 = document.createElement("h1");
+  h1.style.color = "cadetblue";
  const p = document.createElement("p");
   h1.textContent = todo.todo;
-  div.append(h1);
+ const smallBox = document.createElement('div');
+ smallBox.classList.add('circle');
+ if(todo.importence==="importent"){
+    smallBox.classList.add('red');
+ }else if(todo.importence ==="optional"){
+    smallBox.classList.add('yellow');
+ }
+ else{
+    smallBox.classList.add('green');
+ }
+ if(todo.compaleted){
+    h1.style.textDecoration = "line-through";
+ }
+  div.append(h1,smallBox);
   parent.append(div);
 }
 }

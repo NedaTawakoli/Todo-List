@@ -28,15 +28,10 @@
 </head>
 <body>
     <button onclick="handleAlert()">کلیک کنید</button>
-    <button onclick="handle1Alert()">کلیک کنید</button>
+    <!-- <button onclick="handle1Alert()">کلیک کنید</button> -->
     <div style=" width: 50%; display: flex;" id="continer"></div>
     <script>
-       let parent = document.getElementById('continer');
-        function handle1Alert(){
-           let text = document.createElement("h1");
-           text.textContent = "Hello, Welcome to the class";
-           parent.append(text);
-        }
+    //   
         const handleAlert=()=>{
           Swal.fire({
   title: "Good job!",

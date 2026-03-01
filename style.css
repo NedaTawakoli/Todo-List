@@ -23,6 +23,39 @@ div.continer > nav>button{
     border-radius: 5px;
     border: none ;
 }
+div.parent{
+    margin-top:70px ;
+    display: flex;
+    align-items: center;
+   flex-direction: column;
+    gap: 9px;
+  
+}
+div.circle{
+    height: 20px;
+    width: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+div.box{
+    width: 60%;
+    padding: 8px 12px;
+    border: 1px solid cadetblue;
+    border-radius: 15px;
+    display: flex;
+      box-shadow: 5px 5px 20px cadetblue;
+    justify-content:space-between;
+    align-items: center;
+}
+div.red{
+  background-color: red;
+}
+div.yellow{
+    background-color: yellow;
+}
+div.green{
+    background-color: greenyellow;
+}
 div.continer > div.continer-modal{
     width: 100%;
     height: 100vh;
