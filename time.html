@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+    <div class="bg-black h-screen w-full flex justify-center items-center">
+        <div id="box" class="w-[50%] text-8xl py-11 text-white shadow-2xl shadow-purple-900 text-center  h-52 p-4  bg-linear-60 from-purple-600 via-purple-500 to-purple-900 rounded-xl">
+        
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   const box = document.getElementById('box');
+  let hours = document.createElement("span");
+  box.append(hours)
+   function displyTime(){
+   let now = new Date();
+   let second = now.getSeconds();
+   let min = now.getMinutes();
+   let hour = now.getHours();
+   if(second<10){
+    second = "0"+ second;
+   }
+   if(min<10){
+    min = "0"+ min;
+   }
+   if(hour<10){
+    hour = "0"+ hour
+   }
+   hours.textContent = hour+ ":" +min  +":" + second
+   }
+   setInterval(displyTime,1000);
+   displyTime();
+</script>
