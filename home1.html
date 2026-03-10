@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="width: 100%; display: flex;background-color: black;height: 100vh; justify-content: space-between;">
+        <div id="div" style="width: 50%;height: 55vh; margin: 50px auto;box-shadow: 8px 8px 20px gray;  border: 1px solid white; ">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+   const div = document.getElementById("div");
+   const h1 = document.createElement("h1");
+   const p = document.createElement("p");
+   p.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error, animi fuga neque recusandae similique velit non tempore eius? Perferendis obcaecati molestiae natus ratione facere impedit laudantium consequatur id. Qui Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error, animi fuga neque recusandae similique velit non tempore eius? Perferendis obcaecati molestiae natus ratione facere impedit laudantium consequatur id. Qui. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates error, animi fuga neque recusandae similique velit non tempore eius? Perferendis obcaecati molestiae natus ratione facere impedit laudantium consequatur id. Qui.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ferendis obcaecati molestiae natus ratione facere impedit laudantium consequatur id. Qui."
+   h1.textContent = "In The Name Of Allah";
+   h1.style.cssText = "text-align:center;font-size:30px;color:white";
+   p.style.cssText = "text-align:justify;font-size:20px;color:white;padding:10px"
+   div.append(h1,p);
+</script>

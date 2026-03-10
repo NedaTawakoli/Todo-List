@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    const listNumber=[1,2,3,4,5,6,7,8,9];
+    function getNumber(num){
+        return num>7;
+    }
+   const result3 = listNumber.some(getNumber);
+   let list =[2,4,6,8,10,12,14];
+   function getNatija(num){
+    return num>=2;
+   }
+   const natija = list.every(getNatija);
+   function getReduce(fili,item){
+    return fili+item;
+   }
+  let natija1= list.reduce(getReduce,0);
+   let number = 981.89;
+   let convertedToText = number.toString();
+   let [sabit,asharia] = convertedToText.split('.');
+const studentInfos={
+  name:"Ali",
+  lastName:"Ahmadi",
+  age:18,
+  gender:"male"
+}
+for(let key in studentInfos){
+    console.log(studentInfo[key]);
+}
+const newPerson = Object.create(null,{
+    name:{
+        value: "Ali",
+        writable : true,
+        enumerable: true,
+    },
+    lastName:{
+        value:"Ahmadi",
+        writable : false,
+        enumerable:true,
+    }
+});
+const studentInfo = {
+    name:"Sadaf",
+    lastName:"Qurbani",
+    age:20,
+    score:100,
+}
+let result = Object.freeze(studentInfo);
+const coputerInfo = {
+    company:"dell",
+    model:7490,
+    color:"white"
+}
+if(!Object.isFrozen(coputerInfo)){
+   coputerInfo.model = 7480;
+}else{
+    console.log("the object is frozen");
+}
+let result1 = Object.isFrozen(coputerInfo);
+Object.seal(coputerInfo); 
+if(!Object.isSealed(coputerInfo)){
+    coputerInfo.ram = "16GB";
+}
+else{
+    console.log('the object is sealed');
+}
+const listOfStudent=[
+    {
+        name:"Naz",
+        lastName:"Qurbani",
+        score:70,
+        age:15
+    },
+    {
+        name:"NazGul",
+        lastName:"Qurbani",
+        score:90,
+        age:19,
+    },
+    {
+        name:"Nazanin",
+        lastName:"Ahmadi",
+        score:100,
+        age:20
+    },
+    {
+        name:"Nargis",
+        lastName:"Baqeri",
+        score:75,
+        age:17
+    },
+];
+for(let value of listOfStudent){
+    Object.freeze(value);
+}
+
+</script>
